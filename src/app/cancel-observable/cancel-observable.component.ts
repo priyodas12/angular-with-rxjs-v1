@@ -27,9 +27,9 @@ export class CancelObservableComponent {
         let i = 0;
         let interval = setInterval(() => {
           console.log("Interval Time");
-          if (i === 7) {
-            observer.error("unwanted error raised")
-          }
+          // if (i === 7) {
+          //   observer.error("unwanted error raised")
+          // }
           observer.next(i++);
         }, 1000)
 

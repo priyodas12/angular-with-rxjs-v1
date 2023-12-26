@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { RxjsBasicComponent } from './rxjs-basic/rxjs-basic.component';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
 import { CancelObservableComponent } from './cancel-observable/cancel-observable.component';
+import { OperatorBasicsComponent } from './operator-basics/operator-basics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RxjsBasicComponent,
     CustomObservableComponent,
-    CancelObservableComponent
+    CancelObservableComponent,
+    OperatorBasicsComponent
   ],
   imports: [
     BrowserModule,
