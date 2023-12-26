@@ -19,14 +19,14 @@ export class OperatorBasicsComponent {
 
     numberObservable
       .pipe(
-        filter(number => {
-          return number % 2 === 0;
-        }),
-      map(
-        number => {
-          return "even number: " + number
-        }
-        )
+          filter(number => {
+            return number % 2 === 0;
+          }
+          ),
+          map(number => {
+              return "even number: " + number
+          }
+          )
       ).subscribe(number => {
         this.numToDisplay = number;
         console.log("Even Number: " + number);
