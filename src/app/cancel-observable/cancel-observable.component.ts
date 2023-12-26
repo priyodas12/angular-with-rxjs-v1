@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Subscription, interval } from 'rxjs';
+import { Observable, Subscription, interval } from 'rxjs';
 
 @Component({
   selector: 'app-cancel-observable',
@@ -19,8 +19,33 @@ export class CancelObservableComponent {
   ngOnInit() {
     //1000ms interval for each object creation.predefined observable
 
-    const observableWithInterval = interval(1000);
+    //const observableWithInterval = interval(1000);
 
+    //custom observable with setTimer
+    const customObservable1 = new Observable(
+      observer => {
+        let i = 0;
+        let interval = setInterval(() => {
+          console.log("Interval Time");
+          if (i === 7) {
+            observer.error("unwanted error raised")
+          }
+          observer.next(i++);
+        }, 1000)
+
+        //clearing interval context
+        return () => {
+          console.log(interval);
+          console.log("called while unsubscribed!");
+          clearInterval(interval);
+        }
+      }
+
+    );
+    this.timerSubscriber = customObservable1.subscribe((data) => {
+      this.timer = new Date().toLocaleTimeString();
+      console.log(new Date().toLocaleTimeString() + " > " + data);
+    })
 
   }
 
