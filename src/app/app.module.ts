@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RxjsBasicComponent } from './rxjs-basic/rxjs-basic.component';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
+import { CancelObservableComponent } from './cancel-observable/cancel-observable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RxjsBasicComponent,
-    CustomObservableComponent
+    CustomObservableComponent,
+    CancelObservableComponent
   ],
   imports: [
     BrowserModule,
