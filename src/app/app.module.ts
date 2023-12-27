@@ -8,6 +8,8 @@ import { CustomObservableComponent } from './custom-observable/custom-observable
 import { CancelObservableComponent } from './cancel-observable/cancel-observable.component';
 import { OperatorBasicsComponent } from './operator-basics/operator-basics.component';
 import { BufferOperatorComponent } from './buffer-operator/buffer-operator.component';
+import { BufferCountComponent } from './transformationOperator/buffer-count/buffer-count.component';
+import { BufferComponent } from './transformationOperator/buffer/buffer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { BufferOperatorComponent } from './buffer-operator/buffer-operator.compo
     CustomObservableComponent,
     CancelObservableComponent,
     OperatorBasicsComponent,
-    BufferOperatorComponent
+    BufferOperatorComponent,
+    BufferCountComponent,
+    BufferComponent
   ],
   imports: [
     BrowserModule,
