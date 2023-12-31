@@ -11,6 +11,16 @@ import { BufferOperatorComponent } from './buffer-operator/buffer-operator.compo
 import { BufferCountComponent } from './transformationOperator/buffer-count/buffer-count.component';
 import { BufferComponent } from './transformationOperator/buffer/buffer.component';
 import { BufferTimeComponent } from './transformationOperator/buffer-time/buffer-time.component';
+import { RouterModule, Routes } from '@angular/router';
+import { OperatorsComponent } from './transformationOperator/operators/operators.component';
+
+const appRoutes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: OperatorsComponent },
+  { path: 'buffer', component: BufferComponent },
+  { path: 'bufferCount', component: BufferCountComponent },
+  { path: 'bufferTime', component: BufferTimeComponent }
+]
 
 @NgModule({
   declarations: [
@@ -22,11 +32,13 @@ import { BufferTimeComponent } from './transformationOperator/buffer-time/buffer
     BufferOperatorComponent,
     BufferCountComponent,
     BufferComponent,
-    BufferTimeComponent
+    BufferTimeComponent,
+    OperatorsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
