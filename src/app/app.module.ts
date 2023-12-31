@@ -13,13 +13,15 @@ import { BufferComponent } from './transformationOperator/buffer/buffer.componen
 import { BufferTimeComponent } from './transformationOperator/buffer-time/buffer-time.component';
 import { RouterModule, Routes } from '@angular/router';
 import { OperatorsComponent } from './transformationOperator/operators/operators.component';
+import { BufferToggleComponent } from './transformationOperator/buffer-toggle/buffer-toggle.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: OperatorsComponent },
   { path: 'buffer', component: BufferComponent },
   { path: 'bufferCount', component: BufferCountComponent },
-  { path: 'bufferTime', component: BufferTimeComponent }
+  { path: 'bufferTime', component: BufferTimeComponent },
+  { path: 'bufferToggle', component: BufferToggleComponent }
 ]
 
 @NgModule({
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
     BufferCountComponent,
     BufferComponent,
     BufferTimeComponent,
-    OperatorsComponent
+    OperatorsComponent,
+    BufferToggleComponent
   ],
   imports: [
     BrowserModule,
