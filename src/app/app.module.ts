@@ -14,6 +14,7 @@ import { BufferTimeComponent } from './transformationOperator/buffer-time/buffer
 import { RouterModule, Routes } from '@angular/router';
 import { OperatorsComponent } from './transformationOperator/operators/operators.component';
 import { BufferToggleComponent } from './transformationOperator/buffer-toggle/buffer-toggle.component';
+import { BufferWhenComponent } from './transformationOperator/buffer-when/buffer-when.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
   { path: 'buffer', component: BufferComponent },
   { path: 'bufferCount', component: BufferCountComponent },
   { path: 'bufferTime', component: BufferTimeComponent },
-  { path: 'bufferToggle', component: BufferToggleComponent }
+  { path: 'bufferToggle', component: BufferToggleComponent },
+  { path: 'bufferWhen', component: BufferWhenComponent }
 ]
 
 @NgModule({
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     BufferComponent,
     BufferTimeComponent,
     OperatorsComponent,
-    BufferToggleComponent
+    BufferToggleComponent,
+    BufferWhenComponent
   ],
   imports: [
     BrowserModule,
