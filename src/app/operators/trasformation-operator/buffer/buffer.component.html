@@ -1,0 +1,10 @@
+<div class="buffer-op">
+    <h2>View Console for Buffer Demo</h2>
+    <pre>The buffer operator in RxJS collects values emitted by the source observable until 
+a closing notifier observable emits a value. When the closing notifier emits a value,
+the buffered values are emitted as an array, and a new buffer is started.</pre>
+    <p>Display items: {{numbers}}</p>
+    <button class="btn btn-success btn-sm" id="bufferClick">Live Stream</button><br/>
+    <!-- <button id="cancel" (click)="startOnClick()">Start Subscription</button><br/><br/> -->
+    <button class="btn btn-danger" id="cancel" (click)="cancelOnClick()">Cancel Subscription</button>
+</div>

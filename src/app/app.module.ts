@@ -15,6 +15,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { OperatorDefComponent } from './operators/operator-def/operator-def.component';
 import { BufferToggleComponent } from './operators/trasformation-operator/buffer-toggle/buffer-toggle.component';
 import { BufferWhenComponent } from './operators/trasformation-operator/buffer-when/buffer-when.component';
+import { TakeComponent } from './operators/filtering-operator/take/take.component';
+import { TakeWhileComponent } from './operators/filtering-operator/take-while/take-while.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -23,7 +25,9 @@ const appRoutes: Routes = [
   { path: 'bufferCount', component: BufferCountComponent },
   { path: 'bufferTime', component: BufferTimeComponent },
   { path: 'bufferToggle', component: BufferToggleComponent },
-  { path: 'bufferWhen', component: BufferWhenComponent }
+  { path: 'bufferWhen', component: BufferWhenComponent },
+  { path: 'take', component: TakeComponent },
+  { path: 'takeWhile', component: TakeWhileComponent }
 ]
 
 @NgModule({
@@ -40,7 +44,9 @@ const appRoutes: Routes = [
     OperatorDefComponent,
     BufferToggleComponent,
     BufferWhenComponent,
-    OperatorDefComponent
+    OperatorDefComponent,
+    TakeComponent,
+    TakeWhileComponent
   ],
   imports: [
     BrowserModule,
