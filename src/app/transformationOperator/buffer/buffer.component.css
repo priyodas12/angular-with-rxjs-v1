@@ -1,7 +1,11 @@
 .buffer-op{
-    background-color: rgb(170, 148, 190);
+    background-color: rgb(226, 210, 241);
     margin:10px;
     padding:10px;
     border-radius: 10px;;
-    display: flex;
+}
+
+button{
+    padding:5px;
+    margin:5px;
 }
