@@ -8,17 +8,17 @@ import { CustomObservableComponent } from './custom-observable/custom-observable
 import { CancelObservableComponent } from './cancel-observable/cancel-observable.component';
 import { OperatorBasicsComponent } from './operator-basics/operator-basics.component';
 import { BufferOperatorComponent } from './buffer-operator/buffer-operator.component';
-import { BufferCountComponent } from './transformationOperator/buffer-count/buffer-count.component';
-import { BufferComponent } from './transformationOperator/buffer/buffer.component';
-import { BufferTimeComponent } from './transformationOperator/buffer-time/buffer-time.component';
+import { BufferCountComponent } from './operators/trasformation-operator/buffer-count/buffer-count.component';
+import { BufferComponent } from './operators/trasformation-operator/buffer/buffer.component';
+import { BufferTimeComponent } from './operators/trasformation-operator/buffer-time/buffer-time.component';
 import { RouterModule, Routes } from '@angular/router';
-import { OperatorsComponent } from './transformationOperator/operators/operators.component';
-import { BufferToggleComponent } from './transformationOperator/buffer-toggle/buffer-toggle.component';
-import { BufferWhenComponent } from './transformationOperator/buffer-when/buffer-when.component';
+import { OperatorDefComponent } from './operators/operator-def/operator-def.component';
+import { BufferToggleComponent } from './operators/trasformation-operator/buffer-toggle/buffer-toggle.component';
+import { BufferWhenComponent } from './operators/trasformation-operator/buffer-when/buffer-when.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: OperatorsComponent },
+  { path: 'home', component: OperatorDefComponent },
   { path: 'buffer', component: BufferComponent },
   { path: 'bufferCount', component: BufferCountComponent },
   { path: 'bufferTime', component: BufferTimeComponent },
@@ -37,9 +37,10 @@ const appRoutes: Routes = [
     BufferCountComponent,
     BufferComponent,
     BufferTimeComponent,
-    OperatorsComponent,
+    OperatorDefComponent,
     BufferToggleComponent,
-    BufferWhenComponent
+    BufferWhenComponent,
+    OperatorDefComponent
   ],
   imports: [
     BrowserModule,
